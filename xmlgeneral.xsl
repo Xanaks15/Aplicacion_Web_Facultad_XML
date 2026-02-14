@@ -18,12 +18,18 @@
       <body class="fondo_main">
         <div class="container col-md-10">
           <br/>
-          <div align="center">
-            <img src="assets/escudo_buap.png" width="250px" height="250px"/>
-            <img src="assets/letras.png" width="350px" height="100px"/>
+          <div class="header-container fade-in">
+              <div class="header-logo">
+                  <img src="assets/logo.png" class="logo-img"/>
+              </div>
+              <div class="header-title">
+                  <h1>FACULTAD DE CIENCIAS DE LA COMPUTACIÓN</h1>
+              </div>
+              <div class="header-logo">
+                  <img src="assets/logo.png" class="logo-text"/>
+              </div>
           </div>
           <br/>
-          <h2 align="center" class="titulo">FACULTAD DE CIENCIAS DE LA COMPUTACIÓN</h2>
           <br/>
           <div class="accordion" id="accordionExample">
             <div class="card">
