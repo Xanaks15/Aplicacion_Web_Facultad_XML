@@ -693,5 +693,41 @@
   </posgrado>
   <licenciatura/>
   <inventario>
+    <equipo>
+      <no_inventario>FCC-LPT-001</no_inventario>
+      <serie>CND8234XBY</serie>
+      <tipo>Laptop</tipo>
+      <marca>HP</marca>
+      <modelo>Pavilion 15</modelo>
+      <procesador>Intel Core i7 10th Gen, 16GB RAM</procesador>
+      <fecha_adquisicion>2023-01-15</fecha_adquisicion>
+      <costo>25000.00</costo>
+      <estado>Bueno</estado>
+      <responsable>1</responsable>
+    </equipo>
+    <equipo>
+      <no_inventario>FCC-PROY-042</no_inventario>
+      <serie>EPS99887766</serie>
+      <tipo>Cañón</tipo>
+      <marca>Epson</marca>
+      <modelo>PowerLite X41</modelo>
+      <procesador>N/A</procesador>
+      <fecha_adquisicion>2022-11-20</fecha_adquisicion>
+      <costo>12500.50</costo>
+      <estado>Regular</estado>
+      <responsable>201485693</responsable>
+    </equipo>
+    <equipo>
+      <no_inventario>FCC-SRV-005</no_inventario>
+      <serie>DEL33445566</serie>
+      <tipo>Server</tipo>
+      <marca>Dell</marca>
+      <modelo>PowerEdge T440</modelo>
+      <procesador>Xeon Silver 4208, 64GB ECC</procesador>
+      <fecha_adquisicion>2021-05-10</fecha_adquisicion>
+      <costo>85000.00</costo>
+      <estado>Nuevo</estado>
+      <responsable>2</responsable>
+    </equipo>
   </inventario>
 </facultad>
