@@ -508,7 +508,22 @@
         <td><xsl:value-of select="tipo"/></td>
         <td><xsl:value-of select="marca"/></td>
         <td><xsl:value-of select="modelo"/></td>
-        <td><xsl:value-of select="responsable"/></td>
+        <td>
+          <strong><xsl:value-of select="responsable"/></strong><br/>
+          <span style="font-size:0.85rem; color:#6c757d;">
+            <xsl:choose>
+              <xsl:when test="/facultad/posgrado/maestria/areas/area/alumnos/alumno[matricula=current()/responsable]">
+                <i class="fas fa-user-graduate"></i>&#160;<xsl:value-of select="/facultad/posgrado/maestria/areas/area/alumnos/alumno[matricula=current()/responsable]/nombre"/>
+              </xsl:when>
+              <xsl:when test="/facultad/posgrado/maestria/personal/profesores/profesor[@id_profesor=current()/responsable]">
+                <i class="fas fa-chalkboard-teacher"></i>&#160;<xsl:value-of select="/facultad/posgrado/maestria/personal/profesores/profesor[@id_profesor=current()/responsable]/nombre"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <i class="fas fa-question-circle"></i>&#160;Desconocido
+              </xsl:otherwise>
+            </xsl:choose>
+          </span>
+        </td>
         <td><xsl:value-of select="estado"/></td>
         <td>
           <button type="button" name="button" class="btn btn-danger" data-toggle="popover" title="Eliminar Equipo" style="height:32px;height:32px">
