@@ -31,6 +31,8 @@ if (isset($_GET["id"])) {
     if (isNaN(costo) || costo <= 0) {
       $("<div>El costo debe ser mayor a 0.</div>").dialog({
         title: "Error de Validación",
+        draggable: false,
+        position: { my: "center", at: "center", of: window },
         resizable: false,
         height: "auto",
         width: 400,
@@ -58,6 +60,8 @@ if (isset($_GET["id"])) {
           //Error Responsable no existe
           $("<div>El ID del Responsable no existe en Profesores ni Alumnos.</div>").dialog({
             title: "Error de Validación",
+            draggable: false,
+            position: { my: "center", at: "center", of: window },
             resizable: false,
             height: "auto",
             width: 400,
@@ -75,6 +79,8 @@ if (isset($_GET["id"])) {
           //Error serie duplicada
           $("<div>El Número de Serie ya existe. Debe ser único.</div>").dialog({
             title: "Error de Validación",
+            draggable: false,
+            position: { my: "center", at: "center", of: window },
             resizable: false,
             height: "auto",
             width: 400,
@@ -92,6 +98,8 @@ if (isset($_GET["id"])) {
           //Error costo inválido
           $("<div>El costo debe ser mayor a 0.</div>").dialog({
             title: "Error de Validación",
+            draggable: false,
+            position: { my: "center", at: "center", of: window },
             resizable: false,
             height: "auto",
             width: 400,
@@ -109,6 +117,8 @@ if (isset($_GET["id"])) {
         if (response == "1") {
           $("<div>Accion Completada.</div>").dialog({
             title: "Acción Completada",
+            draggable: false,
+            position: { my: "center", at: "center", of: window },
             resizable: false,
             height: "auto",
             width: 400,
@@ -126,6 +136,8 @@ if (isset($_GET["id"])) {
         // Fallback: si llega otra respuesta (p.ej. xml completo o texto), igual lo tratamos como éxito
         $("<div>Accion Completada.</div>").dialog({
           title: "Acción Completada",
+          draggable: false,
+          position: { my: "center", at: "center", of: window },
           resizable: false,
           height: "auto",
           width: 400,

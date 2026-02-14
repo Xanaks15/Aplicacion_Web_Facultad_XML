@@ -33,6 +33,8 @@ if (isset($_GET["id"])) {
             //Error clave de materia ya existe
               $( "<div>La clave ya ha sido establecida en otra materia.</div>" ).dialog({
                 title:"Error",
+                draggable: false,
+                position: { my: "center", at: "center", of: window },
                 resizable: false,
                 height: "auto",
                 width: 400,
@@ -46,6 +48,8 @@ if (isset($_GET["id"])) {
           } else {
             $( "<div>Accion Completada.</div>" ).dialog({
               title:"Acción Completada",
+              draggable: false,
+              position: { my: "center", at: "center", of: window },
               resizable: false,
               height: "auto",
               width: 400,

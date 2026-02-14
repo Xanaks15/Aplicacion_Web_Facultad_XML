@@ -223,67 +223,112 @@
           }
         }
         function eliminar(id,tipo){
-          aviso="Titulo"
-          aviso2=""
+          let aviso="Titulo";
+          let aviso2="";
+
           switch (tipo) {
-            case 1: //Para Estudiantes
-              aviso="¿Eliminar Estudiante?"
-              aviso2="Estudiante Eliminado"
+            case 1:
+              aviso="¿Eliminar Estudiante?";
+              aviso2="Estudiante Eliminado";
               break;
-            case 2: //Para Profesores
-              aviso="¿Eliminar Profesor?"
-              aviso2="Profesor Eliminado"
+            case 2:
+              aviso="¿Eliminar Profesor?";
+              aviso2="Profesor Eliminado";
               break;
-            case 3: //Para Materias
-              aviso="¿Eliminar Materia?"
-              aviso2="Materia Eliminado"
+            case 3:
+              aviso="¿Eliminar Materia?";
+              aviso2="Materia Eliminado";
               break;
-            case 4: //Para Inventario
-              aviso="¿Eliminar Equipo?"
-              aviso2="Equipo Eliminado"
+            case 4:
+              aviso="¿Eliminar Equipo?";
+              aviso2="Equipo Eliminado";
               break;
           }
 
-          $( "<div>Esta acción no se puede deshacer... ¿Desea continuar?</div>" ).dialog({
-            title:aviso,
+          // ===== FIX: guardar scroll antes de abrir =====
+          const st = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+          $("<div>Esta acción no se puede deshacer... ¿Desea continuar?</div>").dialog({
+            title: aviso,
             resizable: false,
             height: "auto",
             width: 400,
             modal: true,
+            draggable: false,
+            // centrado real en viewport
+            position: { my: "center", at: "center", of: window },
+
+            open: function () {
+              // evita que el dialog “persiga” el documento y cause scroll
+              const $w = $(this).dialog("widget");
+              $w.css({ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" });
+
+              // restaura scroll sí o sí
+              window.scrollTo(0, st);
+
+              // quita enfoque automático (a veces provoca scroll)
+              $(this).parent().find(".ui-dialog-titlebar-close").blur();
+            },
+
+            close: function () {
+              $(this).remove();
+            },
+
             buttons: {
               "Eliminar": function() {
-                $( this ).dialog( "close" );
+                $(this).dialog("close");
+
+                // guarda scroll otra vez para el segundo dialog
+                const st2 = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
                 $.ajax({
-                  //Eliminar Registro
-                data: {acc:"3",id:id,tipo:tipo},
-                url: "include/funciones.php",
-                type: "post",
-                success: function (response) {
-                  $( "<div>Accion Completada</div>" ).dialog({
-                    title:"Acción Completada",
-                    resizable: false,
-                    height: "auto",
-                    width: 400,
-                    modal: true,
-                    buttons: {
-                      "Entendido": function() {
-                        $( this ).dialog( "close" );
-                        location.reload();
+                  data: { acc: "3", id: id, tipo: tipo },
+                  url: "include/funciones.php",
+                  type: "post",
+                  success: function (response) {
+
+                    $("<div>Accion Completada</div>").dialog({
+                      title: "Acción Completada",
+                      resizable: false,
+                      height: "auto",
+                      width: 400,
+                      modal: true,
+                      draggable: false,
+                      position: { my: "center", at: "center", of: window },
+
+                      open: function () {
+                        const $w = $(this).dialog("widget");
+                        $w.css({ position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" });
+                        window.scrollTo(0, st2);
+                        $(this).parent().find(".ui-dialog-titlebar-close").blur();
+                      },
+
+                      close: function () {
+                        $(this).remove();
+                      },
+
+                      buttons: {
+                        "Entendido": function() {
+                          $(this).dialog("close");
+                          location.reload();
+                        }
                       }
-                    }
-                  });
-                },
-                  error: function (xhr, ajaxOptions, thrownError) {
+                    });
+
+                  },
+                  error: function (xhr) {
                     alert(xhr.status);
                   }
-              });
+                });
               },
+
               "Cancelar": function() {
-                $( this ).dialog( "close" );
+                $(this).dialog("close");
               }
             }
           });
         }
+
       </script>
     </html>
   </xsl:template>
