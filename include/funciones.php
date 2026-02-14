@@ -60,6 +60,7 @@ switch ($_POST["acc"]) {
           echo $xml->asXML("../xmlgeneral.xml");
         }
         break;
+
       case 2:
         #Insertar Profesor
         //Validar si existe el Profesor
@@ -89,6 +90,7 @@ switch ($_POST["acc"]) {
           echo $xml->asXML("../xmlgeneral.xml");
         }
         break;
+
       case 3:
         #Insertar Materia
         //Validar si existe la Materia
@@ -109,22 +111,46 @@ switch ($_POST["acc"]) {
           echo $xml->asXML("../xmlgeneral.xml");
         }
         break;
+
       case 4:
         #Insertar Equipo (Inventario)
+
+        // Validar costo > 0
+        if ($costo <= 0) {
+          echo "COSTO_INVALIDO";
+          exit;
+        }
+
+        // --- FIX: asegurar nodo inventario antes de usarlo ---
+        if (!isset($xml->posgrado->maestria->inventario)) {
+          $xml->posgrado->maestria->addChild('inventario');
+        }
+
         //Validar unicidad del No. Inventario
-        $dato = $xml->xpath("/facultad/inventario/equipo[no_inventario='" . $no_inventario . "']");
+        $dato = $xml->xpath("/facultad/posgrado/maestria/inventario/equipo[no_inventario='" . $no_inventario . "']");
         if (count($dato) > 0) {
           echo "0"; //Ya existe
         } else {
+          // --- FIX: limpiar responsable ---
+          $responsable = trim($responsable);
+
+          // Validar unicidad del Número de Serie
+          $datoSerie = $xml->xpath("/facultad/posgrado/maestria/inventario/equipo[serie='" . $serie . "']");
+          if (count($datoSerie) > 0) {
+            echo "SERIE_DUPLICADA";
+            exit;
+          }
+
           //Validar Responsable (Alumno o Profesor)
           $alumno = $xml->xpath("/facultad/posgrado/maestria/areas/area/alumnos/alumno[matricula='" . $responsable . "']");
-          $profesor = $xml->xpath("/facultad/posgrado/maestria/personal/profesores/profesor[@id_profesor='" . $responsable . "']");
+          // --- FIX: profesor por atributo numérico (sin comillas) ---
+          $profesor = $xml->xpath("/facultad/posgrado/maestria/personal/profesores/profesor[@id_profesor=" . $responsable . "]");
 
           if (count($alumno) == 0 && count($profesor) == 0) {
             echo "RESPONSABLE_NO_EXISTE";
           } else {
             //Insertar
-            $equipo = $xml->inventario->addChild('equipo');
+            $equipo = $xml->posgrado->maestria->inventario->addChild('equipo');
             $equipo->addChild('no_inventario', $no_inventario);
             $equipo->addChild('serie', $serie);
             $equipo->addChild('tipo', $tipo_equipo);
@@ -135,12 +161,14 @@ switch ($_POST["acc"]) {
             $equipo->addChild('costo', $costo);
             $equipo->addChild('estado', $estado);
             $equipo->addChild('responsable', $responsable);
-            echo $xml->asXML("../xmlgeneral.xml");
+            $ok = $xml->asXML("../xmlgeneral.xml");
+            echo ($ok ? "1" : "ERROR_GUARDAR_XML");
           }
         }
         break;
     }
     break;
+
   case '2': #editar Registro del XML
     //Obtener variables
     foreach ($_POST as $nombre_campo => $valor) {
@@ -198,6 +226,7 @@ switch ($_POST["acc"]) {
         }
         echo $xml->asXML("../xmlgeneral.xml");
         break;
+
       case 2:
         #Editar Profesor
         $dato = $xml->xpath("/facultad/posgrado/maestria/personal/profesores/profesor[@id_profesor=" . $id . "]");
@@ -223,6 +252,7 @@ switch ($_POST["acc"]) {
         }
         echo $xml->asXML("../xmlgeneral.xml");
         break;
+
       case 3:
         #Editar Materia
         $dato = $xml->xpath("/facultad/posgrado/maestria/materias/materia[clave_mat=" . $id . "]");
@@ -239,21 +269,45 @@ switch ($_POST["acc"]) {
         $materia->addChild('periodo', $periodo);
         echo $xml->asXML("../xmlgeneral.xml");
         break;
+
       case 4:
         #Editar Equipo
-        $dato = $xml->xpath("/facultad/inventario/equipo[no_inventario='" . $id_original . "']");
+
+        // Validar costo > 0
+        if ($costo <= 0) {
+          echo "COSTO_INVALIDO";
+          exit;
+        }
+
+        // --- FIX: asegurar nodo inventario ---
+        if (!isset($xml->posgrado->maestria->inventario)) {
+          $xml->posgrado->maestria->addChild('inventario');
+        }
+
+        $dato = $xml->xpath("/facultad/posgrado/maestria/inventario/equipo[no_inventario='" . $id_original . "']");
         if (count($dato) > 0) {
           unset($dato[0][0]); //Borrar el viejo
         }
 
+        // --- FIX: limpiar responsable ---
+        $responsable = trim($responsable);
+
+        // Validar unicidad del Número de Serie (excluyendo el registro actual)
+        $datoSerie = $xml->xpath("/facultad/posgrado/maestria/inventario/equipo[serie='" . $serie . "' and no_inventario!='" . $id_original . "']");
+        if (count($datoSerie) > 0) {
+          echo "SERIE_DUPLICADA";
+          exit;
+        }
+
         //Validar Responsable
         $alumno = $xml->xpath("/facultad/posgrado/maestria/areas/area/alumnos/alumno[matricula='" . $responsable . "']");
-        $profesor = $xml->xpath("/facultad/posgrado/maestria/personal/profesores/profesor[@id_profesor='" . $responsable . "']");
+        // --- FIX: profesor por atributo numérico (sin comillas) ---
+        $profesor = $xml->xpath("/facultad/posgrado/maestria/personal/profesores/profesor[@id_profesor=" . $responsable . "]");
 
         if (count($alumno) == 0 && count($profesor) == 0) {
           echo "RESPONSABLE_NO_EXISTE";
         } else {
-          $equipo = $xml->inventario->addChild('equipo');
+          $equipo = $xml->posgrado->maestria->inventario->addChild('equipo');
           $equipo->addChild('no_inventario', $no_inventario);
           $equipo->addChild('serie', $serie);
           $equipo->addChild('tipo', $tipo_equipo);
@@ -264,11 +318,13 @@ switch ($_POST["acc"]) {
           $equipo->addChild('costo', $costo);
           $equipo->addChild('estado', $estado);
           $equipo->addChild('responsable', $responsable);
-          echo $xml->asXML("../xmlgeneral.xml");
+          $ok = $xml->asXML("../xmlgeneral.xml");
+          echo ($ok ? "1" : "ERROR_GUARDAR_XML");
         }
         break;
     }
     break;
+
   case '3': #eliminar Registro del XML
     $id = $_POST["id"];
     $tipo = $_POST["tipo"];
@@ -303,9 +359,10 @@ switch ($_POST["acc"]) {
         break;
       case 4:
         #Eliminar Equipo
-        $dato = $xml->xpath("/facultad/inventario/equipo[no_inventario='" . $id . "']");
+        $dato = $xml->xpath("/facultad/posgrado/maestria/inventario/equipo[no_inventario='" . $id . "']");
         unset($dato[0][0]);
-        $xml->asXML("../xmlgeneral.xml");
+        $ok = $xml->asXML("../xmlgeneral.xml");
+        echo ($ok ? "1" : "ERROR_GUARDAR_XML");
         break;
     }
     break;

@@ -20,13 +20,13 @@
           <br/>
           <div class="header-container fade-in">
               <div class="header-logo">
-                  <img src="assets/logo.png" class="logo-img"/>
+                  <img src="assets/escudo_buap.png" class="logo-img"/>
               </div>
               <div class="header-title">
                   <h1>FACULTAD DE CIENCIAS DE LA COMPUTACIÓN</h1>
               </div>
               <div class="header-logo">
-                  <img src="assets/logo.png" class="logo-text"/>
+                  <img src="assets/letras.png" class="logo-text"/>
               </div>
           </div>
           <br/>
@@ -161,7 +161,7 @@
                       <th>Acciones</th>
                     </thead>
                     <tbody>
-                      <xsl:for-each select="facultad/inventario/equipo">
+                      <xsl:for-each select="facultad/posgrado/maestria/inventario/equipo">
                         <xsl:apply-templates select="."/>
                       </xsl:for-each>
                     </tbody>
@@ -349,7 +349,7 @@
                     </ul>
                   </xsl:for-each>
               </td>
-              <td>
+              <td style="width: 130px;">
                 <button type="button" name="button" class="btn btn-danger" data-toggle="popover" title="Eliminar Estudiante" style="height:32px;height:32px">
                   <xsl:attribute name="onclick">
                     eliminar(<xsl:value-of select="matricula"/>,1)
@@ -400,7 +400,7 @@
                 </xsl:for-each>
               </ul>
             </td>
-            <td>
+            <td style="width: 130px;">
               <button type="button" name="button" class="btn btn-danger" data-toggle="popover" title="Eliminar Profesor" style="height:32px;height:32px">
                 <xsl:attribute name="onclick">
                   eliminar(<xsl:value-of select="attribute::id_profesor"/>,2)

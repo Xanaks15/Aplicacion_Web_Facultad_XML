@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(90deg, #003B5C 0%, #005a8b 100%);
     padding: 15px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -51,6 +51,7 @@ body {
 }
 
 .header-title h1 {
+    color: #FFFFFF;
     font-weight: 700;
     font-size: 1.8rem;
     margin: 0;
@@ -85,6 +86,8 @@ body {
     background: linear-gradient(90deg, #003B5C 0%, #005a8b 100%);
     border-bottom: none;
     padding: 0;
+    color: white;
+    margin-bottom: 10px;
 }
 
 .card-header h2 button {
@@ -96,10 +99,6 @@ body {
     padding: 15px 25px;
     display: block;
     transition: background 0.3s;
-}
-
-.card-header h2 button:hover {
-    background: rgba(255,255,255,0.1);
 }
 
 .text_btn_acordeon {
@@ -128,6 +127,7 @@ body {
     border: none;
     border-radius: 20px;
     box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    margin-left: 10px;
 }
 
 .btn-danger {
@@ -155,6 +155,7 @@ body {
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
+    border: transparent;
 }
 
 .table tbody tr {
@@ -177,6 +178,7 @@ body {
 .input_search {
     border: 2px solid #00b5e2;
     border-radius: 0 20px 20px 0;
+    margin-right: 20px;
 }
 
 /* Animations */
@@ -211,4 +213,54 @@ body {
     background: #003B5C;
     color: white;
     border: none;
+}
+
+.form-row {
+    margin-top: 10px;
+}
+
+.form-row h4 {
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.ui-dialog {
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.ui-dialog-titlebar {
+    background: #003B5C;
+    color: white;
+    border-radius: 10px;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+    background: linear-gradient(45deg, #003B5C, #00b5e2);
+    border: none;
+    color: white;
+    border-radius: 15px;
+    font-weight: 500;
+}
+
+.ui-widget-content {
+    border: 0;
+    border-radius: 15px;
+    padding-bottom: 0;
+}
+
+.btn-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-link:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-link:focus {
+    color: #ffffff;
+    text-decoration: none;
 }

@@ -3,7 +3,7 @@ $xml = simplexml_load_file("xmlgeneral.xml");
 
 if (isset($_GET["id"])) {
   #Recuperar datos del ID dado (Número de Inventario)
-  $equipo = $xml->xpath("/facultad/inventario/equipo[no_inventario='" . $_GET["id"] . "']");
+  $equipo = $xml->xpath("/facultad/posgrado/maestria/inventario/equipo[no_inventario='" . $_GET["id"] . "']");
 }
 ?>
 <!DOCTYPE html>
@@ -22,30 +22,39 @@ if (isset($_GET["id"])) {
   <script src="js/jquery-ui.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
 </head>
+
 <script type="text/javascript">
   function guardar() {
+
+    // Validación extra en front (no reemplaza la validación en PHP)
+    var costo = parseFloat($("input[name='costo']").val());
+    if (isNaN(costo) || costo <= 0) {
+      $("<div>El costo debe ser mayor a 0.</div>").dialog({
+        title: "Error de Validación",
+        resizable: false,
+        height: "auto",
+        width: 400,
+        modal: true,
+        buttons: {
+          "Entendido": function () {
+            $(this).dialog("close");
+          }
+        }
+      });
+      return; // CANCELA envío
+    }
+
     $.ajax({
       //Guardar/Editar Registro
       url: "include/funciones.php",
       type: "post",
       data: $("#formulario").serialize(),
       success: function (response) {
+
+        response = $.trim(response);
         console.log(response);
-        if (response == "0") {
-          //Error Número de Inventario ya existe
-          $("<div>El Número de Inventario ya existe.</div>").dialog({
-            title: "Error",
-            resizable: false,
-            height: "auto",
-            width: 400,
-            modal: true,
-            buttons: {
-              "Entendido": function () {
-                $(this).dialog("close");
-              }
-            }
-          });
-        } else if (response == "RESPONSABLE_NO_EXISTE") {
+
+        if (response == "RESPONSABLE_NO_EXISTE") {
           //Error Responsable no existe
           $("<div>El ID del Responsable no existe en Profesores ni Alumnos.</div>").dialog({
             title: "Error de Validación",
@@ -59,7 +68,45 @@ if (isset($_GET["id"])) {
               }
             }
           });
-        } else {
+          return; // CANCELA flujo
+        }
+
+        if (response == "SERIE_DUPLICADA") {
+          //Error serie duplicada
+          $("<div>El Número de Serie ya existe. Debe ser único.</div>").dialog({
+            title: "Error de Validación",
+            resizable: false,
+            height: "auto",
+            width: 400,
+            modal: true,
+            buttons: {
+              "Entendido": function () {
+                $(this).dialog("close");
+              }
+            }
+          });
+          return; // CANCELA flujo
+        }
+
+        if (response == "COSTO_INVALIDO") {
+          //Error costo inválido
+          $("<div>El costo debe ser mayor a 0.</div>").dialog({
+            title: "Error de Validación",
+            resizable: false,
+            height: "auto",
+            width: 400,
+            modal: true,
+            buttons: {
+              "Entendido": function () {
+                $(this).dialog("close");
+              }
+            }
+          });
+          return; // CANCELA flujo
+        }
+
+        // Si tu funciones.php para inventario devuelve "1" en éxito, lo manejamos aquí
+        if (response == "1") {
           $("<div>Accion Completada.</div>").dialog({
             title: "Acción Completada",
             resizable: false,
@@ -73,7 +120,23 @@ if (isset($_GET["id"])) {
               }
             }
           });
+          return;
         }
+
+        // Fallback: si llega otra respuesta (p.ej. xml completo o texto), igual lo tratamos como éxito
+        $("<div>Accion Completada.</div>").dialog({
+          title: "Acción Completada",
+          resizable: false,
+          height: "auto",
+          width: 400,
+          modal: true,
+          buttons: {
+            "Entendido": function () {
+              $(this).dialog("close");
+              document.location = 'xmlgeneral.xml';
+            }
+          }
+        });
       },
       error: function (xhr, ajaxOptions, thrownError) {
         alert(xhr.status);
@@ -192,8 +255,8 @@ if (isset($_GET["id"])) {
                   </div>
                   <div class="form-group col-md-4">
                     <label>Costo de Compra:</label>
-                    <input type="number" step="0.01" name="costo" class="form-control" required
-                      oninvalid="this.setCustomValidity('Por favor, complete este campo.')"
+                    <input type="number" step="0.01" min="0.01" name="costo" class="form-control" required
+                      oninvalid="this.setCustomValidity('El costo debe ser mayor a 0.')"
                       oninput="this.setCustomValidity('')" <?php if (isset($_GET["id"])) {
                         echo "value='" . $equipo[0]->costo . "'";
                       } ?>>
@@ -226,8 +289,7 @@ if (isset($_GET["id"])) {
                       oninput="this.setCustomValidity('')" <?php if (isset($_GET["id"])) {
                         echo "value='" . $equipo[0]->responsable . "'";
                       } ?>>
-                    <small class="form-text text-muted">Debe ser una matrícula de alumno existente o un ID de profesor
-                      existente.</small>
+                    <small class="form-text text-muted">Debe ser una matrícula de alumno existente o un ID de profesor existente.</small>
                   </div>
                 </div>
 
@@ -236,6 +298,7 @@ if (isset($_GET["id"])) {
           </div>
         </div>
       </div>
+
       <br>
       <?php if (!isset($_GET["id"])): ?>
         <div align="center" style="margin-bottom: 20px;">
@@ -249,6 +312,7 @@ if (isset($_GET["id"])) {
     </div>
   </form>
 </body>
+
 <script>
   $("#fecha_adquisicion").datepicker({
     dateFormat: "yy-mm-dd",

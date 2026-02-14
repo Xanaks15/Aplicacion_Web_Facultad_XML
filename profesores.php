@@ -159,11 +159,11 @@ if (isset($_GET["id"])) {
                 <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                   Materias
                 </button>
-                <button type="button" class="btn btn-success" id="clonar_materia">Agregar Materia</button>
-                <button type="button" class="btn btn-danger" id="eliminar_materia">Eliminar Materia</button>
               </h5>
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <button type="button"class="btn btn-success" style="margin-left: 30px; margin-top: 10px;" id="clonar_materia">Agregar Materia</button>
+              <button type="button"class="btn btn-danger" style="margin-top: 10px;" id="eliminar_materia">Eliminar Materia</button>
               <div class="card-body" id="padre">
                 <div id="mat"><?php
                   if (isset($Materias_impartidas)&&(count($Materias_impartidas)>0)) {
