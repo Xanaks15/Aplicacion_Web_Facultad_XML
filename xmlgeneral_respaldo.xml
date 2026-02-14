@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xmlgeneral.xsl"?>
+<facultad>
+  <posgrado>
+    <maestria>
+      <areas>
+        <area clave="BD">
+          <alumnos>
+            <alumno>
+              <matricula>201456369</matricula>
+              <nombre>Luis Alfredo Sánchez García</nombre>
+              <fecha_nac>1995-09-07</fecha_nac>
+              <edad>24</edad>
+              <grados_academicos>
+                <grado>
+                  <titulo>Ingeniero en Ciencias de la Computación</titulo>
+                  <promedio>9.52</promedio>
+                  <escuela>Benemérita Universidad Autónoma de Puebla</escuela>
+                </grado>
+              </grados_academicos>
+              <materias>
+                <materia clave_mat="100036799"/>
+                <materia clave_mat="100237033"/>
+                <materia clave_mat="100409411"/>
+                <materia clave_mat="100409344"/>
+              </materias>
+              <tutor>Dra. María Molina González</tutor>
+              <prom_actual>9.5</prom_actual>
+              <creditos>36</creditos>
+              <email>luisalfredo@outlook.com</email>
+              <telefono>2356987412</telefono>
+              <genero>M</genero>
+              <no_cvu>852369</no_cvu>
+              <curp>SAGL951007HVZNNS01</curp>
+              <rfc>SAGL951007H73</rfc>
+            </alumno>
+            <alumno>
+              <matricula>201302896</matricula>
+              <nombre>José Valdez Tovar</nombre>
+              <fecha_nac>1990-10-04</fecha_nac>
+              <edad>30</edad>
+              <grados_academicos>
+                <grado>
+                  <titulo>Licenciatura en Informática</titulo>
+                  <promedio>8.7</promedio>
+                  <escuela>Universidad Autónoma de Tamaulipas</escuela>
+                </grado>
+              </grados_academicos>
+              <materias>
+                <materia clave_mat="100036799"/>
+                <materia clave_mat="100237033"/>
+                <materia clave_mat="100409411"/>
+                <materia clave_mat="100409344"/>
+              </materias>
+              <tutor>Dr. Eduardo González Álvarez</tutor>
+              <prom_actual>8.75</prom_actual>
+              <creditos>36</creditos>
+              <email>jose@gmail.com</email>
+              <telefono>7896541230</telefono>
+              <genero>M</genero>
+              <no_cvu>123456789</no_cvu>
+              <curp>VATF821004HTSLVR06</curp>
+              <rfc>VATF821004MR5</rfc>
+            </alumno>
+            <alumno>
+              <matricula>201485693</matricula>
+              <nombre>Manuel Pérez Mata</nombre>
+              <fecha_nac>1994-03-01</fecha_nac>
+              <edad>26</edad>
+              <grados_academicos>
+                <grado>
+                  <titulo>Ing. en Desarrollo de Software</titulo>
+                  <promedio>9.58</promedio>
+                  <escuela>Universidad Politecnica de Chiapas</escuela>
+                </grado>
+              </grados_academicos>
+              <materias>
+                <materia clave_mat="100036799"/>
+                <materia clave_mat="100237033"/>
+                <materia clave_mat="100409411"/>
+                <materia clave_mat="100409344"/>
+              </materias>
+              <tutor>Dra. Beatriz López Sánchez</tutor>
+              <prom_actual>9.25</prom_actual>
+              <creditos>36</creditos>
+              <email>manuel@gmail.com</email>
+              <telefono>9635654304</telefono>
+              <genero>M</genero>
+              <no_cvu>972078</no_cvu>
+              <curp>MAPJ9703015D5</curp>
+              <rfc>MAPJ9703015D5</rfc>
+            </alumno>
+          </alumnos>
+        </area>
+        <area clave="SD">
+          <alumnos>
+            <alumno>
+              <matricula>201456398</matricula>
+              <nombre>Jesús Alberto Islas Fuentes</nombre>
+              <fecha_nac>1992-05-13</fecha_nac>
+              <edad>27</edad>
+              <grados_academicos>
+                <grado>
+                  <titulo>Lic. en Ingeniería Mecatrónica</titulo>
+                  <promedio>8.86</promedio>
+                  <escuela>Benemérita Universidad Autónoma de Puebla</escuela>
+                </grado>
+              </grados_academicos>
+              <materias>
+                <materia clave_mat="100443488" />
+                <materia clave_mat="100130900" />
+                <materia clave_mat="100334100" />
+                <materia clave_mat="100100768" />
+              </materias>
+              <tutor>Dr. José Luis Carballido Carranza</tutor>
+              <prom_actual>9.5</prom_actual>
+              <creditos>36</creditos>
+              <email>albertisfu@gmail.com</email>
+              <telefono>2227692080</telefono>
+              <genero>M</genero>
+              <no_cvu>724705</no_cvu>
+              <curp>IAFJ920513HPLSNS09</curp>
+              <rfc>IAFJ9205133B7</rfc>
+            </alumno>
+            <alumno>
+              <matricula>201365987</matricula>
+              <nombre>Nallely Morales Lozada</nombre>
+              <fecha_nac>1993-05-29</fecha_nac>
+              <edad>26</edad>
+              <grados_academicos>
+                <grado>
+                  <titulo>Ingeniería en Sistemas Computacionales</titulo>
+                  <promedio>86.94</promedio>
+                  <escuela>Instituto Tecnológico de Pachuca</escuela>
+                </grado>
+              </grados_academicos>
+              <materias>
+                <materia clave_mat="100443488" />
+                <materia clave_mat="100130900" />
+                <materia clave_mat="100334100" />
+                <materia clave_mat="100100768" />
+              </materias>
+              <tutor>Claudia Zepeda</tutor>
+              <prom_actual>9.5</prom_actual>
+              <creditos>36</creditos>
+              <email>nalle.ml29@gmail.com</email>
+              <telefono>7711625901</telefono>
+              <genero>F</genero>
+              <no_cvu>761316</no_cvu>
+              <curp>MOLN930529MHGRZL09</curp>
+              <rfc>MOLN930529CU5</rfc>
+            </alumno>
+            <alumno>
+              <matricula>201236985</matricula>
+              <nombre>Victor Daniel Machorro García</nombre>
+              <fecha_nac>1982-02-24</fecha_nac>
+              <edad>37</edad>
+              <grados_academicos>
+                <grado>
+                  <titulo>Licenciado en Ciencias de la Computación</titulo>
+                  <promedio>8.65</promedio>
+                  <escuela>Benemérita Universidad Autónoma de Puebla</escuela>
+                </grado>
+              </grados_academicos>
+              <materias>
+                <materia clave_mat="100443488" />
+                <materia clave_mat="100130900" />
+                <materia clave_mat="100334100" />
+                <materia clave_mat="100100768" />
+              </materias>
+              <tutor>Dr. Migel Ángel León Chávez</tutor>
+              <prom_actual>9.25</prom_actual>
+              <creditos>36</creditos>
+              <email>d.machorro@gmail.com</email>
+              <telefono>2225676384</telefono>
+              <genero>M</genero>
+              <no_cvu>761345</no_cvu>
+              <curp>MAGV820224HPLCRC00</curp>
+              <rfc>MAGV82022TU8</rfc>
+            </alumno>
+            <alumno>
+              <matricula>201345632</matricula>
+              <nombre>Irving Gabriel Ocampo</nombre>
+              <fecha_nac>1991-10-26</fecha_nac>
+              <edad>28</edad>
+              <grados_academicos>
+                <grado>
+                  <titulo>Ing. en Ciencias de la Computación</titulo>
+                  <promedio>8.5</promedio>
+                  <escuela>Benemérita Universidad Autónoma de Puebla</escuela>
+                </grado>
+              </grados_academicos>
+              <materias>
+                <materia clave_mat="100443488" />
+                <materia clave_mat="100130900" />
+                <materia clave_mat="100334100" />
+                <materia clave_mat="100100768" />
+              </materias>
+              <tutor>Dr. Ivo Humberto Pineda Torres</tutor>
+              <prom_actual>9.0</prom_actual>
+              <creditos>27</creditos>
+              <email>irving.gabriel@correo.buap.mx</email>
+              <telefono>2221886130</telefono>
+              <genero>M</genero>
+              <no_cvu>873999</no_cvu>
+              <curp>GAOI911026HPLBCR06</curp>
+              <rfc>GAOI911026SS9</rfc>
+            </alumno>
+          </alumnos>
+        </area>
+        <area clave="ISI">
+          <alumnos>
+            <alumno>
+              <matricula>201478652</matricula>
+              <nombre>Anel Ramírez Álvarez</nombre>
+              <fecha_nac>1993-11-26</fecha_nac>
+              <edad>26</edad>
+              <grados_academicos>
+                <grado>
+                  <titulo>Lic. en Electrónica</titulo>
+                  <promedio>9.0</promedio>
+                  <escuela>Benemérita Universidad Autónoma de Puebla</escuela>
+                </grado>
+              </grados_academicos>
+              <materias>
+                <materia clave_mat="100067111" />
+                <materia clave_mat="100210511" />
+                <materia clave_mat="100038766" />
+                <materia clave_mat="100223144" />
+              </materias>
+              <tutor>Dr. Guillermo de Ita Luna</tutor>
+              <prom_actual>9.5</prom_actual>
+              <creditos>36</creditos>
+              <email>anel.ramirez.al@gmail.com</email>
+              <telefono>2214374922</telefono>
+              <genero>F</genero>
+              <no_cvu>972311</no_cvu>
+              <curp>RAAA931126MPLMLN07</curp>
+              <rfc>RAAA931126L39</rfc>
+            </alumno>
+          </alumnos>
+        </area>
+        <area clave="CM">
+          <alumnos>
+            <alumno>
+              <matricula>201389654</matricula>
+              <nombre>Jairo Egberto Powell González</nombre>
+              <fecha_nac>1991-12-17</fecha_nac>
+              <edad>28</edad>
+              <grados_academicos>
+                <grado>
+                  <titulo>Ingeniero en Electrónica y Sistemas Inteligentes</titulo>
+                  <promedio>9.0</promedio>
+                  <escuela>UDLAP</escuela>
+                </grado>
+              </grados_academicos>
+              <materias>
+                <materia clave_mat="100190255" />
+                <materia clave_mat="100299344" />
+                <materia clave_mat="100119488" />
+                <materia clave_mat="100064377" />
+              </materias>
+              <tutor>Dra. Maya Carrillo Ruiz</tutor>
+              <prom_actual>9.75</prom_actual>
+              <creditos>36</creditos>
+              <email>jaipogo@hotmail.com</email>
+              <telefono>2221426422</telefono>
+              <genero>M</genero>
+              <no_cvu>956878</no_cvu>
+              <curp>POGJ9111217HPLWNR05</curp>
+              <rfc>POGJ911217</rfc>
+            </alumno>
+          </alumnos>
+        </area>
+      </areas>
+      <personal>
+        <!--Seccion 1-->
+        <profesores>
+          <profesor id_profesor="1">
+            <nombre>Mireya Tovar Vidal</nombre>
+            <materias_imp>
+              <materia clave_mat="100409344" /><!--Solo una referencia o se repita la info? (Esto es lo que preguntaremos)-->
+            </materias_imp>
+            <ubicacion>CC01</ubicacion>
+            <correo_electronico>mtovarvidal@gmail.com</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Mireya Tovar Vidal, David Eduardo Pinto Avendaño, Azucena Montes Rendón, Juan Gabriel González Serna, Darnes Vilariño Ayala</autores>
+                <titulo>Evaluation of ontological relations in corpora of restricted domain</titulo>
+                <anio>2015</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <profesor id_profesor="2">
+            <nombre>María Josefa Somodevilla García</nombre>
+            <materias_imp>
+              <materia clave_mat="100036799" />
+            </materias_imp>
+            <ubicacion>CC01-Oficina de Posgrado</ubicacion>
+            <correo_electronico>maria.somodevilla@correo.buap.mx</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Perez De Celis Herrero Concepcion, Lara Alvarez Jaime, Somodevilla Garcia Maria Josefa</autores>
+                <titulo>An Approach to Art Collections Management and Content-based Recovery</titulo>
+                <anio>2011</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <profesor id_profesor="3">
+            <nombre>David Eduardo Pinto Avendaño</nombre>
+            <materias_imp>
+              <materia clave_mat="100237033" />
+            </materias_imp>
+            <ubicacion>Cubículo: 1 - CC03</ubicacion>
+            <correo_electronico>dpinto@cs.buap.mx</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>	Jiménez Salazar, Héctor | Pinto Avendaño, David Eduardo | Rosso, Paolo</autores>
+                <titulo>Uso del punto de transición en la selección de términos índice para agrupamiento de textos cortos</titulo>
+                <anio>2005</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <profesor id_profesor="4">
+            <nombre>Darnes Vilariño Ayala</nombre>
+            <materias_imp>
+              <materia clave_mat="100409411" />
+            </materias_imp>
+            <ubicacion>Cubículo: 206 - CC03</ubicacion>
+            <correo_electronico>darnes@cs.buap.mx</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Esteban Castillo, Ofelia Cervantes, Darnes Vilariño, David Pinto and Saul León</autores>
+                <titulo>Unsupervised method for the authorship identification task</titulo>
+                <anio>2014</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <!--Profesores de Sist. Distribuidos-->
+          <profesor id_profesor="5">
+            <nombre>Miguel Ángel León Chávez</nombre>
+            <materias_imp>
+              <materia clave_mat="100334100" />
+            </materias_imp>
+            <ubicacion>Cubículo: 103 B - CC01</ubicacion>
+            <correo_electronico>mleon@cs.buap.mx</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Francisco Rodríguez-Henríquez, Carlos E. López-Peza, Miguel Angel León-Chávez </autores>
+                <titulo>Comparative Performance Analysis of Public-Key Cryptographic Operations in the WTLS Handshake Protocol</titulo>
+                <anio>2004</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <profesor id_profesor="6">
+            <nombre>Bárbara Emma Sánchex Rinza</nombre>
+            <materias_imp>
+              <materia clave_mat="100334100" />
+            </materias_imp>
+            <ubicacion>Cubículo: 306 - CC03</ubicacion>
+            <correo_electronico>brinza@cs.buap.mx</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Bárbara Emma Sánchez Rinza, Elizabeth López Meléndez</autores>
+                <titulo>Sistema De Análisis De Mastografías Asistido Por Computadora </titulo>
+                <anio>2011</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <profesor id_profesor="7">
+            <nombre>Ivo Humberto Pineda Torres</nombre>
+            <materias_imp>
+              <materia clave_mat="100130900" />
+            </materias_imp>
+            <ubicacion>Cubículo: 103 E - CC01</ubicacion>
+            <correo_electronico>ipineda@cs.buap.mx</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Ivo Humberto Pineda Torres, María Josefa Somodevilla García, María del Carmen Lara Muñoz, Concepción Pérez de Celis Herrero, Rubén Espinosa Rodríguez</autores>
+                <titulo>Chatbots en redes sociales para el apoyo oportuno de estudiantes universitarios con síntomas de trastorno por déficit de la atención con hiperactividad</titulo>
+                <anio>2011</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <profesor id_profesor="8">
+            <nombre>Iván Olmos Pineda</nombre>
+            <materias_imp>
+              <materia clave_mat="100334100" />
+            </materias_imp>
+            <ubicacion>Cubículo: 106 - CC03</ubicacion>
+            <correo_electronico>iolmos@cs.buap.mx</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Ricardo Ramos-Aguilar, J. Arturo Olvera-López, Ivan Olmos-Pineda</autores>
+                <titulo>Analysis of EEG Signal Processing Techniques based on Spectrograms</titulo>
+                <anio>2017</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <!--Profesores de ISI-->
+          <profesor id_profesor="9">
+            <nombre>Guillermo De Ita Luna</nombre>
+            <materias_imp>
+              <materia clave_mat="100038766" />
+            </materias_imp>
+            <ubicacion>Cubículo: CC01</ubicacion>
+            <correo_electronico>deita@cs.buap.mx</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>GuillermoDe Ita Luna, J. Raymundo Marcial-Romero, José A.Hernández</autores>
+                <titulo>The Incremental Satisfiability Problem for a Two Conjunctive Normal Form</titulo>
+                <anio>2016</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <profesor id_profesor="10">
+            <nombre>Luis Carlos Altamirano Robles</nombre>
+            <materias_imp>
+              <materia clave_mat="100223144" />
+            </materias_imp>
+            <ubicacion>Cubículo: 302 - CC04</ubicacion>
+            <correo_electronico>altamirano@cs.buap.mx</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Guillermo De Ita Luna, Yolanda Moyao Martinez, Luis Carlos Altamirano Robles</autores>
+                <titulo>Applying Max-2SAT to Efficient Belief Revision</titulo>
+                <anio>2011</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <profesor id_profesor="11">
+            <nombre>José Alejandro Rangel Huerta</nombre>
+            <materias_imp>
+              <materia clave_mat="100067111" />
+            </materias_imp>
+            <ubicacion>Cubículo: 111 - CC02</ubicacion>
+            <correo_electronico>alejandro.rangel.fcc@gmail.com</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Mario Mauricio Bustillo Díaz, Alejandro Rangel Huerta, Nicolás Quiroz Hernández, Gerardo Martines Guzmán, Juan Carlos Flores García,
+                  Mario Leopoldo Bustillo Eguiluz, Juan Aurelio Ortiz Morales
+                </autores>
+                <titulo>Defects Detection on the Surface of Pellets Using Digital Image Processing</titulo>
+                <anio>2015</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <profesor id_profesor="12">
+            <nombre>Mario Anzures García</nombre>
+            <materias_imp>
+              <materia clave_mat="100210511" />
+            </materias_imp>
+            <ubicacion>Cubículo: 103 A - CC01</ubicacion>
+            <correo_electronico>anzures@cs.buap.mx</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Mario Anzures-García, Luz A. Sánchez-Gálvez, Miguel J. Hornos, Patricia Paderewski-Rodríguez</autores>
+                <titulo>Ontology-Based Modelling of Session Management Policies for Groupware Applications</titulo>
+                <anio>2007</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <!--Profesores de Computación Matemática-->
+          <profesor id_profesor="13">
+            <nombre>María de Lourdes Sandoval Solís</nombre>
+            <materias_imp>
+              <materia clave_mat="100064377" />
+            </materias_imp>
+            <ubicacion>Cubículo: 106 - CC02</ubicacion>
+            <correo_electronico>maria.Sandoval@cs.buap.mx</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Luis René Marcial Castillo, Erika Leonor Basurto Munguia, Marcela Rivera Martínez, María de Lourdes Sandoval Solis</autores>
+                <titulo>Método criptográfico simétrico utilizando teoría del caos, operaciones sobre ADN y raíces de funciones no lineales</titulo>
+                <anio>2016</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <profesor id_profesor="14">
+            <nombre>Rogelio González Velazquez</nombre>
+            <materias_imp>
+              <materia clave_mat="100119488" />
+            </materias_imp>
+            <ubicacion>Cubículo: 103 K - CC01</ubicacion>
+            <correo_electronico>rgonzalez@cs.buap.mx</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Mauricio Romero Montoya, María Beatríz Bernábe Loranca, Rogelio González Velázquez, José Luis Martínez Flores, Horacio Bautista Santos</autores>
+                <titulo>A Solution Proposal for the Capacitated P-Median Problem with Tabu Search</titulo>
+                <anio>2016</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <profesor id_profesor="15">
+            <nombre>Pedro García Juárez</nombre>
+            <materias_imp>
+              <materia clave_mat="100190255" />
+            </materias_imp>
+            <ubicacion>Cubículo: 104 - CC02</ubicacion>
+            <correo_electronico>pgarcia@cs.buap.mx</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Ernest Cortez, German Ardul Muñoz Hernandez, José Italo Cortez, Liliana Cortez, Pedro García Juarez, Javier Poblano Romero</autores>
+                <titulo>Methodology for the MDL Model Implementation of the Dinorwig Hydroelectric Pla</titulo>
+                <anio>2013</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+          <profesor id_profesor="16">
+            <nombre>Maya Carrillo Ruiz</nombre>
+            <materias_imp>
+              <materia clave_mat="100299344" />
+            </materias_imp>
+            <ubicacion>Cubículo: 113 - CC03</ubicacion>
+            <correo_electronico>cmaya@cs.buap.mxs</correo_electronico>
+            <publicaciones>
+              <publicacion>
+                <autores>Colmenares Guillén Luis Enrique, Carrillo Ruiz Maya, Jiménez González Fabiola, Hernández AmecamJosé Luis</autores>
+                <titulo>Problemas generados por el uso de la tecnología en los universitarios</titulo>
+                <anio>2017</anio>
+              </publicacion>
+            </publicaciones>
+          </profesor>
+        </profesores>
+      </personal>
+      <materias>
+        <!--Materias de Bases de datos-->
+        <materia es="MA">
+          <clave_mat>100036799</clave_mat>
+          <nombre>Mineria de Datos</nombre>
+          <creditos>9</creditos>
+          <horario>9:00-10:59</horario>
+          <salon>202</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <materia es="MA">
+          <clave_mat>100237033</clave_mat>
+          <nombre>Recuperacion de la Información</nombre>
+          <creditos>9</creditos>
+          <horario>7:00-9:59</horario>
+          <salon>202</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <materia es="MA">
+          <clave_mat>100409411</clave_mat>
+          <nombre>Optativa I (Topicos selectos de BD-A)</nombre>
+          <creditos>9</creditos>
+          <horario>9:00-11:59</horario>
+          <salon>208</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <materia es="MA">
+          <clave_mat>100409344</clave_mat>
+          <nombre>Optativa II (Topicos selectos de BD-B)</nombre>
+          <creditos>9</creditos>
+          <horario>11:00-12:59</horario>
+          <salon>208</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <!--Materias de Bases de datos-->
+        <!--Materias de Sistemas Distribuidos-->
+        <materia es="MA">
+          <clave_mat>100443488</clave_mat>
+          <nombre>Inteligencia Artificial</nombre>
+          <creditos>9</creditos>
+          <horario>9:00-10:59</horario>
+          <salon>208</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <materia es="MA">
+          <clave_mat>100130900</clave_mat>
+          <nombre>Deep Learning</nombre>
+          <creditos>9</creditos>
+          <horario>11:00-13:59</horario>
+          <salon>203</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <materia es="MA">
+          <clave_mat>100334100</clave_mat>
+          <nombre>Sistemas Operativos Distribuidos en Red</nombre>
+          <creditos>9</creditos>
+          <horario>7:00-7:50, 13:00-13:59, 7:00-7:59</horario>
+          <salon>203</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <materia es="MA">
+          <clave_mat>100100768</clave_mat>
+          <nombre>Tópìcos Selectos de Redes</nombre>
+          <creditos>9</creditos>
+          <horario>11:00-12:59</horario>
+          <salon>203</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <!--Materias de Sistemas Distribuidos-->
+        <!--Materias de ISI-->
+        <materia es="MA">
+          <clave_mat>100067111</clave_mat>
+          <nombre>Modelado y Simulación</nombre>
+          <creditos>9</creditos>
+          <horario>13:00-14:59</horario>
+          <salon>207</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <materia es="MA">
+          <clave_mat>100210511</clave_mat>
+          <nombre>Sistemas y Cómputo Reconfigurable</nombre>
+          <creditos>9</creditos>
+          <horario>9:00-10:59</horario>
+          <salon>204</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <materia es="MA">
+          <clave_mat>100038766</clave_mat>
+          <nombre>Optativa I (Teoría de Grafos)</nombre>
+          <creditos>9</creditos>
+          <horario>7:00-8:59, 9:00-10:59</horario>
+          <salon>205</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <materia es="MA">
+          <clave_mat>100223144</clave_mat>
+          <nombre>Inteligencia Computacional</nombre>
+          <creditos>9</creditos>
+          <horario>11:00-12:59</horario>
+          <salon>204</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <!--Materias de ISI-->
+        <!--Materias de CM-->
+        <materia es="MA">
+          <clave_mat>100190255</clave_mat>
+          <nombre>Optativa II (Probabilidad y Estadística)</nombre>
+          <creditos>9</creditos>
+          <horario>9:00-10:59</horario>
+          <salon>208</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <materia es="MA">
+          <clave_mat>100299344</clave_mat>
+          <nombre>Optativa 1 (Métodos Heurísticos)</nombre>
+          <creditos>9</creditos>
+          <horario>15:00-16:59</horario>
+          <salon>203</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <materia es="MA">
+          <clave_mat>100119488</clave_mat>
+          <nombre>Investigación de Operaciones</nombre>
+          <creditos>9</creditos>
+          <horario>11:00-12:59</horario>
+          <salon>207</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <materia es="MA">
+          <clave_mat>100064377</clave_mat>
+          <nombre>Análisis Numérico</nombre>
+          <creditos>9</creditos>
+          <horario>9:00-11:59</horario>
+          <salon>205</salon>
+          <periodo>Primavera 2020</periodo>
+        </materia>
+        <!--Materias de CM-->
+      </materias>
+    </maestria>
+    <doctorado/>
+  </posgrado>
+  <licenciatura/>
+</facultad>

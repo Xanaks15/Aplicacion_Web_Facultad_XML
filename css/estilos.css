@@ -1,0 +1,49 @@
+.fondo_main{
+    background-image: url("../assets/fondo2.png");
+    background-size: 100% 100%;
+}
+.titulo{
+    font-weight: bold;
+    color: #FFFFFF!important;
+    text-align: center;
+    font-size: 24pt;
+    font-family: Arial!important;
+}
+.boton_guardar{
+    width: 140px;
+    background-color: #3BAFD2;
+    border-color: #3BAFD2;
+    /*font-family: Spartan MB Regular;*/
+    font-size: 14pt;
+}
+.boton_guardar:hover{
+    background-color: #faa54f;
+    border-color: #faa54f;
+}
+.boton_editar{
+    width: 140px;
+    background-color: #3BAFD2;
+    border-color: #3BAFD2;
+    /*font-family: Spartan MB Regular;*/
+    font-size: 14pt;
+}
+.boton_editar:hover{
+    background-color: #faa54f;
+    border-color: #faa54f;
+}
+.text_btn_acordeon{
+  font-size: 15pt;
+  font-family: Arial!important;
+}
+.header_materias{
+  background-color: #3BAFD2!important;
+  font-family: Arial!important;
+  font-weight: bold;
+  font-size: 18pt;
+}
+.span_search{
+  background-color: #B4E7F7!important;
+}
+.input_search{
+  margin-right: 10px;
+}
