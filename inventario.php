@@ -47,17 +47,16 @@ if (isset($_GET["id"])) {
     }
 
     $.ajax({
-      //Guardar/Editar Registro
       url: "include/funciones.php",
       type: "post",
       data: $("#formulario").serialize(),
       success: function (response) {
 
         response = $.trim(response);
-        console.log(response);
+        console.log("RESPUESTA:", response);
 
-        if (response == "RESPONSABLE_NO_EXISTE") {
-          //Error Responsable no existe
+        // --- Responsable no existe ---
+        if (response === "RESPONSABLE_NO_EXISTE") {
           $("<div>El ID del Responsable no existe en Profesores ni Alumnos.</div>").dialog({
             title: "Error de Validación",
             draggable: false,
@@ -72,12 +71,13 @@ if (isset($_GET["id"])) {
               }
             }
           });
-          return; // CANCELA flujo
+          return;
         }
 
-        if (response == "SERIE_DUPLICADA") {
-          //Error serie duplicada
-          $("<div>El Número de Serie ya existe. Debe ser único.</div>").dialog({
+        // --- Inventario duplicado (nuevo comportamiento) ---
+        // Por compatibilidad: si el backend aún devolviera "0", también lo tratamos como duplicado.
+        if (response === "INVENTARIO_DUPLICADO" || response === "0") {
+          $("<div>El Número de Inventario ya existe. Debe ser único.</div>").dialog({
             title: "Error de Validación",
             draggable: false,
             position: { my: "center", at: "center", of: window },
@@ -91,11 +91,11 @@ if (isset($_GET["id"])) {
               }
             }
           });
-          return; // CANCELA flujo
+          return;
         }
 
-        if (response == "COSTO_INVALIDO") {
-          //Error costo inválido
+        // --- Costo inválido ---
+        if (response === "COSTO_INVALIDO") {
           $("<div>El costo debe ser mayor a 0.</div>").dialog({
             title: "Error de Validación",
             draggable: false,
@@ -110,12 +110,31 @@ if (isset($_GET["id"])) {
               }
             }
           });
-          return; // CANCELA flujo
+          return;
         }
 
-        // Si tu funciones.php para inventario devuelve "1" en éxito, lo manejamos aquí
-        if (response == "1") {
-          $("<div>Accion Completada.</div>").dialog({
+        // --- Error al guardar XML ---
+        if (response === "ERROR_GUARDAR_XML") {
+          $("<div>Ocurrió un error al guardar el XML.</div>").dialog({
+            title: "Error",
+            draggable: false,
+            position: { my: "center", at: "center", of: window },
+            resizable: false,
+            height: "auto",
+            width: 400,
+            modal: true,
+            buttons: {
+              "Entendido": function () {
+                $(this).dialog("close");
+              }
+            }
+          });
+          return;
+        }
+
+        // --- Éxito ---
+        if (response === "1") {
+          $("<div>Acción Completada.</div>").dialog({
             title: "Acción Completada",
             draggable: false,
             position: { my: "center", at: "center", of: window },
@@ -133,19 +152,18 @@ if (isset($_GET["id"])) {
           return;
         }
 
-        // Fallback: si llega otra respuesta (p.ej. xml completo o texto), igual lo tratamos como éxito
-        $("<div>Accion Completada.</div>").dialog({
-          title: "Acción Completada",
+        // --- Si llega algo inesperado, NO asumir éxito ---
+        $("<div>Respuesta inesperada del servidor:<br><br><code>" + $("<div/>").text(response).html() + "</code></div>").dialog({
+          title: "Aviso",
           draggable: false,
           position: { my: "center", at: "center", of: window },
           resizable: false,
           height: "auto",
-          width: 400,
+          width: 500,
           modal: true,
           buttons: {
             "Entendido": function () {
               $(this).dialog("close");
-              document.location = 'xmlgeneral.xml';
             }
           }
         });
@@ -164,8 +182,7 @@ if (isset($_GET["id"])) {
       <h2 align="center" class="titulo">Registrar Equipo</h2>
       <br>
       <input type="hidden" name="acc" id="acc" value="<?php echo (isset($_GET["id"]) ? "2" : "1") ?>" />
-      <!-- 1 para nuevo, 2 para editar -->
-      <input type="hidden" name="tipo" id="tipo" value="4" /> <!-- Tipo 4 para Inventario -->
+      <input type="hidden" name="tipo" id="tipo" value="4" />
 
       <div id="accordion">
         <div class="card">
@@ -190,7 +207,6 @@ if (isset($_GET["id"])) {
                       oninput="this.setCustomValidity('')" <?php if (isset($_GET["id"])) {
                         echo "value='" . $equipo[0]->no_inventario . "' readonly";
                       } ?>>
-                    <!-- Si es edición, el ID es readonly -->
                     <?php if (isset($_GET["id"])) { ?>
                       <input type="hidden" name="id_original" value="<?php echo $_GET["id"]; ?>">
                     <?php } ?>

@@ -91,7 +91,7 @@
               </materias>
             </alumno>
             
-          <alumno><matricula>202234640</matricula><nombre>Diego Alberto Nava Rivera</nombre><fecha_nac>2004-04-01</fecha_nac><edad>21</edad><tutor>Roberto Juárez Contreras</tutor><prom_actual>9.4</prom_actual><creditos>169</creditos><email>nava@gmail.com</email><telefono>7442238900</telefono><genero>M</genero><no_cvu>9</no_cvu><curp>NARD041226HPLVVLA3</curp><rfc>NARD041226123</rfc><grados_academicos><grado><titulo>ITI</titulo><promedio>9.4</promedio><escuela>BUAP</escuela></grado></grados_academicos><materias><materia clave_mat="20202020"/><materia clave_mat="100223144"/></materias></alumno></alumnos>
+          <alumno><matricula>202234640</matricula><nombre>Diego Alberto Nava Rivera</nombre><fecha_nac>2004-04-01</fecha_nac><edad>21</edad><tutor>Roberto Juárez Contreras</tutor><prom_actual>9.4</prom_actual><creditos>169</creditos><email>nava@gmail.com</email><telefono>7442238900</telefono><genero>M</genero><no_cvu>9</no_cvu><curp>NARD041226HPLVVLA3</curp><rfc>NARD041226123</rfc><grados_academicos><grado><titulo>ITI</titulo><promedio>9.4</promedio><escuela>BUAP</escuela></grado></grados_academicos><materias><materia clave_mat="100223144"/></materias></alumno></alumnos>
         </area>
         <area clave="SD">
           <alumnos>
@@ -239,7 +239,7 @@
               <curp>RAAA931126MPLMLN07</curp>
               <rfc>RAAA931126L39</rfc>
             </alumno>
-          <alumno><matricula>202269696</matricula><nombre>Andy Pérez Pavón</nombre><fecha_nac>2004-04-01</fecha_nac><edad>21</edad><tutor>Roberto Juárez Contreras</tutor><prom_actual>9.0</prom_actual><creditos>170</creditos><email>andypp@gmail.com</email><telefono>2223334444</telefono><genero>M</genero><no_cvu>7</no_cvu><curp>PEPA202020PPPPR</curp><rfc>PEPA202020PPP</rfc><grados_academicos><grado><titulo>ITIS</titulo><promedio>9.0</promedio><escuela>BUAP</escuela></grado></grados_academicos><materias><materia clave_mat="100036799"/></materias></alumno></alumnos>
+          <alumno><matricula>202269696</matricula><nombre>Andy Pérez Pavón</nombre><fecha_nac>2004-04-01</fecha_nac><edad>21</edad><tutor>Roberto Juárez Contreras</tutor><prom_actual>6</prom_actual><creditos>169</creditos><email>andypp@gmail.com</email><telefono>2223334444</telefono><genero>M</genero><no_cvu>7</no_cvu><curp>PEPA202020PPPPR1A</curp><rfc>PEPA202020PPP</rfc><grados_academicos><grado><titulo>ITIS</titulo><promedio>6</promedio><escuela>BUAP</escuela></grado></grados_academicos><materias><materia clave_mat="100036799"/><materia clave_mat="100443488"/></materias></alumno></alumnos>
         </area>
         <area clave="CM">
           <alumnos>
@@ -523,7 +523,7 @@
               </publicacion>
             </publicaciones>
           </profesor>
-        <profesor id_profesor="17"><nombre>Juan Carlos Conde Ramírez</nombre><ubicacion>CCO3-205</ubicacion><correo_electronico>carlos@gmail.com</correo_electronico><publicaciones><publicacion><autores>Stephen King</autores><titulo>Aplicaciones Distribuidas</titulo><anio>2023</anio></publicacion></publicaciones><materias_imp><materia clave_mat="20202020"/><materia clave_mat="100443488"/></materias_imp></profesor></profesores>
+        <profesor id_profesor="17"><nombre>Juan Carlos Conde Ramírez</nombre><ubicacion>CCO3-205</ubicacion><correo_electronico>carlos@gmail.com</correo_electronico><publicaciones><publicacion><autores>Stephen King</autores><titulo>Aplicaciones Distribuidas</titulo><anio>2022</anio></publicacion></publicaciones><materias_imp><materia clave_mat="100064377"/><materia clave_mat="100119488"/></materias_imp></profesor></profesores>
       </personal>
       <materias>
         <!--Materias de Bases de datos-->
@@ -662,7 +662,7 @@
           <periodo>Primavera 2020</periodo>
         </materia>
         <!--Materias de CM-->
-      <materia es="MA"><clave_mat>20202020</clave_mat><nombre>Servicios Web</nombre><creditos>6</creditos><horario>15:00</horario><salon>404</salon><periodo>Primavera 2026</periodo></materia></materias>
+      <materia es="MA"><clave_mat>100064300</clave_mat><nombre>Servicios Web</nombre><creditos>9</creditos><horario>15:00</horario><salon>404</salon><periodo>Primavera 2026</periodo></materia></materias>
       <inventario>
         
         
@@ -678,7 +678,7 @@
           <estado>Nuevo</estado>
           <responsable>2</responsable>
         </equipo>
-      <equipo><no_inventario>FCC-LPT-001</no_inventario><serie>CND8234XBY</serie><tipo>Laptop</tipo><marca>HP</marca><modelo>Pavilion 15</modelo><procesador>Intel Core i7 10th Gen, 16GB RAM</procesador><fecha_adquisicion>2023-01-15</fecha_adquisicion><costo>25000.00</costo><estado>Malo</estado><responsable>1</responsable></equipo><equipo><no_inventario>FCC-PROY-042</no_inventario><serie>EPS99887766</serie><tipo>Cañón</tipo><marca>Epson</marca><modelo>PowerLite X41</modelo><procesador>N/A</procesador><fecha_adquisicion>2022-11-20</fecha_adquisicion><costo>12500.50</costo><estado>Nuevo</estado><responsable>15</responsable></equipo><equipo><no_inventario>FCC-CÑN-001</no_inventario><serie>CND8234XSS</serie><tipo>Cañón</tipo><marca>HP</marca><modelo>Pavilion 15</modelo><procesador>Intel Core i7 10th Gen, 16GB RAM</procesador><fecha_adquisicion>2023-01-15</fecha_adquisicion><costo>2000</costo><estado>Bueno</estado><responsable>17</responsable></equipo></inventario>
+      <equipo><no_inventario>FCC-LPT-001</no_inventario><serie>CND8234XBY</serie><tipo>Laptop</tipo><marca>HP</marca><modelo>Pavilion 15</modelo><procesador>Intel Core i7 10th Gen, 16GB RAM</procesador><fecha_adquisicion>2023-01-15</fecha_adquisicion><costo>25000.00</costo><estado>Malo</estado><responsable>1</responsable></equipo><equipo><no_inventario>FCC-PROY-042</no_inventario><serie>EPS99887766</serie><tipo>Cañón</tipo><marca>Epson</marca><modelo>PowerLite X41</modelo><procesador>N/A</procesador><fecha_adquisicion>2022-11-20</fecha_adquisicion><costo>12500.50</costo><estado>Nuevo</estado><responsable>15</responsable></equipo><equipo><no_inventario>FCC-LPT-002</no_inventario><serie>CND8234XBY</serie><tipo>Desktop</tipo><marca>HP</marca><modelo>Pavilion 15</modelo><procesador>Intel i7</procesador><fecha_adquisicion>2023-01-15</fecha_adquisicion><costo>2000</costo><estado>Malo</estado><responsable>15</responsable></equipo></inventario>
     </maestria>
     <doctorado/>
   </posgrado>
