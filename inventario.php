@@ -179,7 +179,7 @@ if (isset($_GET["id"])) {
   <form role="form" id="formulario" name="formulario" action="javascript:guardar();">
     <br><br>
     <div class="container">
-      <h2 align="center" class="titulo">Registrar Equipo</h2>
+      <h2 align="center" class="titulo"><?php echo (isset($_GET["id"]) ? "Editar Equipo" : "Registrar Equipo"); ?></h2>
       <br>
       <input type="hidden" name="acc" id="acc" value="<?php echo (isset($_GET["id"]) ? "2" : "1") ?>" />
       <input type="hidden" name="tipo" id="tipo" value="4" />
